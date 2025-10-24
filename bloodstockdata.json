@@ -1,0 +1,52 @@
+[
+  {
+    "bloodGroup": "A+",
+    "unitsAvailable": 25,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "A-",
+    "unitsAvailable": 10,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "B+",
+    "unitsAvailable": 30,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "B-",
+    "unitsAvailable": 8,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "O+",
+    "unitsAvailable": 40,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "O-",
+    "unitsAvailable": 12,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "AB+",
+    "unitsAvailable": 15,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "AB-",
+    "unitsAvailable": 5,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "A1+",
+    "unitsAvailable": 18,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  },
+  {
+    "bloodGroup": "A2+",
+    "unitsAvailable": 7,
+    "lastUpdated": "2025-10-14T00:00:00Z"
+  }
+]

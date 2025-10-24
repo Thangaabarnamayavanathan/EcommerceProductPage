@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood E-Commerce - Donate & Save Lives</title>
+    <meta name="description" content="Blood E-Commerce: Your platform for requesting and donating blood safely and efficiently. Join our community to save lives!">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@300;400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" href="/images/bannerimage.jpeg" type="image/x-icon">
+    <meta property="og:title" content="Blood E-Commerce: Donate & Save Lives">
+    <meta property="og:description" content="Your platform for requesting and donating blood safely and efficiently.">
+    <meta property="og:image" content="./images/social-share.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:type" content="website">
+</head>
+<body class="home">
+    <div class="top-banner">
+        <i class="fas fa-hand-holding-heart"></i> Give Blood, Save Life! <i class="fas fa-tint"></i>
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Blood E-Commerce</a>
+            <nav>
+                <a href="/" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="/login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="/register.html"><i class="fas fa-user-plus"></i> Register</a>
+                <a href="/bloodstock.html"><i class="fas fa-prescription-bottle"></i> View Blood Stock</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home-hero">
+            <h1>Your Lifeline to a Healthier Community</h1>
+            <p>Every drop of blood has the power to save a life. Join our mission, donate blood, and make a tangible difference.</p>
+            <div class="hero-buttons">
+                <a href="/register.html" class="button pulse"><i class="fas fa-users"></i> Join Our Community</a>
+                <a href="/bloodstock.html" class="button button-secondary"><i class="fas fa-search"></i> Find Blood Now</a>
+            </div>
+        </section>
+
+        <section id="features" class="container">
+            <h2>Why Choose Blood E-Commerce?</h2>
+            <ul>
+                <li><i class="fas fa-hand-point-right"></i> <span>Quick & Easy Blood Requests:</span> Get the blood you need, when you need it, with a streamlined request process.</li>
+                <li><i class="fas fa-sync-alt"></i> <span>Real-time Stock Updates:</span> Always know the current blood availability in your local blood banks.</li>
+                <li><i class="fas fa-shield-alt"></i> <span>Secure User & Blood Bank Accounts:</span> Your data and transactions are protected with top-tier security.</li>
+                <li><i class="fas fa-chart-line"></i> <span>Efficient Admin Management:</span> Comprehensive tools for blood banks to manage inventory and requests.</li>
+                <li><i class="fas fa-user-lock"></i> <span>Donor Privacy & Protection:</span> We prioritize and protect the confidentiality of our generous donors.</li>
+                <li><i class="fas fa-book-open"></i> <span>Educational Resources:</span> Learn about blood donation, eligibility, and its vital impact.</li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="container py-section">
+            <h2 class="text-center">Impact & Community in Action</h2>
+            <p class="text-center text-dark">See how your contributions make a difference and the compassionate community we are building.</p>
+            <div class="image-grid">
+                <figure class="gallery-item">
+                    <img src="/images/doctorcheckingblood.jpeg" alt="Doctor checking blood sample" loading="lazy">
+                    <figcaption>Diligent testing ensures safe blood.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/images/patientreceivingblood.jpeg" alt="Patient receiving blood transfusion" loading="lazy">
+                    <figcaption>A patient receiving a life-saving transfusion.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/images/communitymemberdonateblood.jpeg" alt="Community members donating blood" loading="lazy">
+                    <figcaption>Our vibrant community united in donation.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/images/blooddonation.jpeg" alt="Happy blood donor smiling" loading="lazy">
+                    <figcaption>The joy of giving and saving lives.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="cta" class="container">
+            <h3>Ready to Make a Lifesaving Difference?</h3>
+            <p>Your compassion can bring hope. Whether you need blood or can offer it, join our mission today!</p>
+            <div class="hero-buttons">
+                <a href="/register.html" class="button"><i class="fas fa-hand-holding-medical"></i> Become a Donor</a>
+                <a href="/bloodrequest.html" class="button button-secondary"><i class="fas fa-notes-medical"></i> Request Blood</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Blood E-Commerce. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname;
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

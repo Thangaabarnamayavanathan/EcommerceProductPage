@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood E-Commerce - Blood Stock</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/login.html">Login</a>
+            <a href="/register.html">Register</a>
+            <a href="/bloodstock.html">View Blood Stock</a>
+        </nav>
+        <h1>Available Blood Stock</h1>
+    </header>
+
+    <main>
+        <section id="stock-display">
+            <h2>Current Blood Inventory</h2>
+            <ul id="blood-stock-list">
+                <!-- Blood stock items will be loaded here by JavaScript -->
+                <li>Loading blood stock...</li>
+            </ul>
+        </section>
+
+        <section id="request-blood">
+            <h2>Request Blood</h2>
+            <p>Please log in to submit a blood request.</p>
+            <form id="request-blood-form" style="display: none;"> <!-- Hidden until user logs in -->
+                <label for="request-blood-group">Blood Group Needed:</label>
+                <select id="request-blood-group" name="bloodGroup" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label for="request-unit">Units (e.g., 1-5):</label>
+                <input type="number" id="request-unit" name="unit" min="1" required>
+
+                <button type="submit">Submit Request</button>
+                <p id="request-error-message" style="color: red;"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blood E-Commerce. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/bloodstock.js"></script>
+</body>
+</html>
